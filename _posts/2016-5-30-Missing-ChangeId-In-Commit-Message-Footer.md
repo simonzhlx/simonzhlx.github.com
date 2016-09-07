@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ERROR: missing Change-Id in commit message footer
+title: ERROR missing Change-Id in commit message footer
 permalink: /Missing-ChangeId-In-Commit-Message-Footer/
 ---
 
