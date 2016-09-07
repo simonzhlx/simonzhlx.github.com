@@ -3,7 +3,6 @@ layout: page
 title: Jekyll Installation Tutorial
 permalink: /Jekyll-Installation-Tutorial/
 ---
-
 ## Prerequisites
 ### Get Ruby Installed
 * [Download the Ruby installer for your system](http://rubyinstaller.org/downloads/)
