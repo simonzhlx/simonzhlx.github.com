@@ -52,8 +52,9 @@ The 1st time I run `jekyll serve`, I got errors below:
         from C:/Ruby23/bin/jekyll:23:in `<main>'  
 
 *Bundler* is a gem dependency of Jekyll which is supposed to be installed with Jekyll. Apparently, it's not. After installing *Bundler* with the command bellow, I got rid of above errors:  
+
 ~~~
-gem install bundler  
+ gem install bundler  
 ~~~
    
 But another dependency that is also supposed to be installed with Jekyll came out:  
