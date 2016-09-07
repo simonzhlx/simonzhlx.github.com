@@ -45,6 +45,8 @@ url: https://simonzhlx.github.io
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -82,6 +84,7 @@ exclude:
 defaults:
   -
    scope:
-     path:""
+     path: ""
+     type: "posts"
    values:
      author: "Simon Zhao"
