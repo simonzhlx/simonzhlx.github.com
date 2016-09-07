@@ -55,22 +55,23 @@ gem install bundler
 ~~~
    
 But another dependency that is also supposed to be installed with Jekyll came out:  
-> C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-.12.5/lib/bundler/resolver.rb:356:in `block in verify_gemfile_dependencies_are_found!':  > Could not find gem 'minima x86-mingw32' in any of the gem sources listed in your Gemfile or available on this machine.(Bundler::GemNotFound)  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in `each'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in `verify_gemfile_dependencies_are_found!'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:200:in `start'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:184:in `resolve'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:200:in `resolve'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:140:in `specs'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:185:in `specs_for'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:174:in `requested_specs'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/environment.rb:19:in `requested_specs'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/runtime.rb:14:in `setup'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler.rb:95:in `setup'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/lib/jekyll/plugin_manager.rb:36:in `require_from_bundler'  
-        from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/exe/jekyll:9:in `<top (required)>'  
-        from C:/Ruby23/bin/jekyll:23:in `load'  
-        from C:/Ruby23/bin/jekyll:23:in `<main>'  
+> C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-.12.5/lib/bundler/resolver.rb:356:in block in verify_gemfile_dependencies_are_found!:  
+> Could not find gem 'minima x86-mingw32 in any of the gem sources listed in your Gemfile or available on this machine.(Bundler::GemNotFound)  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in each  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in verify_gemfile_dependencies_are_found!  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:200:in start  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:184:in resolve  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:200:in resolve  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:140:in specs  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:185:in specs_for  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/definition.rb:174:in requested_specs  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/environment.rb:19:in requested_specs  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/runtime.rb:14:in setup  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler.rb:95:in `setup'  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/lib/jekyll/plugin_manager.rb:36:in `require_from_bundler'  
+> from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/exe/jekyll:9:in `<top (required)>'  
+> from C:/Ruby23/bin/jekyll:23:in `load'  
+> from C:/Ruby23/bin/jekyll:23:in `<main>'  
 
-> Finally, my blog site is able to be served successfully after I installed the dependency '**minima**'.
+Finally, my blog site is able to be served successfully after I installed the dependency '**minima**'.
 
