@@ -11,7 +11,7 @@ I have already known that **Gulp** runs tasks in parallel and there're several w
 until those tasks in the array are finished.  
 
 However there's one thing should be noticed that **those prerequisite tasks might not actually complete** as some plugins called inside those tasks may run in parallel.  
-
+  
 And for avoiding this problem, check whether the plugins leveraged in tasks have a callback that is invoked after its execution if those do, put a parameter as the callback for task's completion and invoke this 
 parameter in the plugin's 'done' callback like following snippet:
 
