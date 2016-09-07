@@ -22,7 +22,8 @@ Try the command below:
 jekyll serve
 ~~~
   
-If you are able to see similar messages as below, you are lucky:  
+If you are able to see similar messages as below, you are lucky:
+
 > Configuration file: C:/**/Blog/_config.yml  
             Source: C:/**/Blog  
        Destination: C:/**/Blog/_site  
@@ -42,6 +43,7 @@ Check it with your browser:
 
 However, I am not a lucky guy most of time :(
 The 1st time I run `jekyll serve`, I got errors below:  
+
 > C:/Ruby23/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)  
         from C:/Ruby23/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'  
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/lib/jekyll/plugin_manager.rb:34:in `require_from_bundler'  
