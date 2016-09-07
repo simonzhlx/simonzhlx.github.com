@@ -78,3 +78,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+defaults:
+  -
+   scope:
+     path:""
+   values:
+     author: "Simon Zhao"
