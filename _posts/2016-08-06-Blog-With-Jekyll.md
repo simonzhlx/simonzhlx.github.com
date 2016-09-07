@@ -72,5 +72,5 @@ But another dependency that is also supposed to be installed with Jekyll came ou
         from C:/Ruby23/bin/jekyll:23:in `load'  
         from C:/Ruby23/bin/jekyll:23:in `<main>'  
 
-Finally, my blog site is able to be served successfully after I installed the dependency '**minima**'.
+> Finally, my blog site is able to be served successfully after I installed the dependency '**minima**'.
 
