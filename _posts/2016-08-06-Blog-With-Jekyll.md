@@ -22,26 +22,25 @@ Try the command below:
 jekyll serve
 ~~~
   
-If you're able to see similar messages as below, you're lucky:  
+If you are able to see similar messages as below, you are lucky:  
 > Configuration file: C:/**/Blog/_config.yml  
             Source: C:/**/Blog  
        Destination: C:/**/Blog/_site  
- Incremental build: disabled. Enable with --incremental  
+> Incremental build: disabled. Enable with --incremental  
       Generating...  
                     done in 1.413 seconds.  
   Please add the following to your Gemfile to avoid polling for changes:  
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?  
- Auto-regeneration: enabled for 'C:/**/Blog'  
-Configuration file: C:/**/Blog/_config.yml  
+> Auto-regeneration: enabled for 'C:/**/Blog'  
+> Configuration file: C:/**/Blog/_config.yml  
     Server address: http://127.0.0.1:4000/  
   Server running... press ctrl-c to stop.  
->
 
 it says your sample site is being served at : **http://127.0.0.1:4000/**  
 Check it with your browser:    
 ![Sample Blog Site in Browser](../images/BrowsingSampleSite.PNG)  
 
-However, I'm not a lucky guy most of time :(
+However, I am not a lucky guy most of time :(
 The 1st time I run `jekyll serve`, I got errors below:  
 > C:/Ruby23/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)  
         from C:/Ruby23/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'  
@@ -49,15 +48,14 @@ The 1st time I run `jekyll serve`, I got errors below:
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/exe/jekyll:9:in `<top (required)>'  
         from C:/Ruby23/bin/jekyll:23:in `load'  
         from C:/Ruby23/bin/jekyll:23:in `<main>'  
->
 
 *Bundler* is a gem dependency of Jekyll which is supposed to be installed with Jekyll. Apparently, it's not. After installing *Bundler* with the command bellow, I got rid of above errors:  
 ~~~
 gem install bundler  
 ~~~
    
-But another dependency that's also supposed to be installed with Jekyll came out:  
-> C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-.12.5/lib/bundler/resolver.rb:356:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'minima x86-mingw32' in any of the gem sources listed in your Gemfile or available on this machine. (Bundler::GemNotFound)  
+But another dependency that is also supposed to be installed with Jekyll came out:  
+> C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-.12.5/lib/bundler/resolver.rb:356:in `block in verify_gemfile_dependencies_are_found!':  > Could not find gem 'minima x86-mingw32' in any of the gem sources listed in your Gemfile or available on this machine.(Bundler::GemNotFound)  
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in `each'  
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:331:in `verify_gemfile_dependencies_are_found!'  
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/resolver.rb:200:in `start'  
@@ -73,7 +71,6 @@ But another dependency that's also supposed to be installed with Jekyll came out
         from C:/Ruby23/lib/ruby/gems/2.3.0/gems/jekyll-3.2.1/exe/jekyll:9:in `<top (required)>'  
         from C:/Ruby23/bin/jekyll:23:in `load'  
         from C:/Ruby23/bin/jekyll:23:in `<main>'  
->
 
 Finally, my blog site is able to be served successfully after I installed the dependency '**minima**'.
 
