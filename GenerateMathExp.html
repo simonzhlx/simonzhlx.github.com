@@ -1,0 +1,45 @@
+<Html>
+	<head>
+		<title>随机生成十以内运算式</title>
+		<script>
+			function GenerateAddtionExps(expQty, addendQty)
+			{
+				var expArray = [];
+				for(var iE = 0; iE < expQty; iE ++)
+				{
+					var expStr = '';
+					for(var iAddend = 0; iAddend < addendQty; iAddend ++)
+					{
+						if(expStr.length > 0)
+						{
+							expStr += ' + ';
+						}
+						
+						expStr += Math.round(Math.random() * 9);
+					}
+					
+					expStr += ' = ';
+					
+					expArray.push(expStr);
+				}
+				
+				return expArray;
+			}
+			
+			var expArray = GenerateAddtionExps(50, 3);
+			var tabStr = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			for(var exp in expArray)
+			{
+				if(exp % 3 == 0)
+				{
+					document.write("<br>");
+				}
+				
+				document.write(expArray[exp] + tabStr);
+			}
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</Html>
