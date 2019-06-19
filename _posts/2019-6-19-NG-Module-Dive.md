@@ -336,6 +336,4 @@ You reference the package lots of times in the application. But SystemJS doesn�
 
 Something similar happens with Webpack if you use angular-cli or configure the webpack yourself. It includes the module code only once in a bundle and gives it the ID. All other modules import symbols from this module using this ID.
 
-----------
-  
-笔者会努力让本文不成为该系列的最后一篇：）也会尽快更新。
+
