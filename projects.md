@@ -9,8 +9,7 @@ permalink: /projects/
 ## Contact me
 
 [hotmail](mailto:simonzhlx@hotmail.com)  
-
+[QQ Mail](mailto:56887245@qq.com)
 ![WebChat:simonezhlx](../images/QR_Code.jpg)
 
-[BUAA Mail](mailto:simonzhao@buaa.edu.cn)  
 
