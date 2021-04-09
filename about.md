@@ -49,8 +49,10 @@ Beijing Institute of Civi Engineering and Architecture Civil Engineering Bachelo
 
 ## Contact me
 
+![WebChat:simonezhlx](../images/QR_Code.jpg)
+
 [hotmail](mailto:simonzhlx@hotmail.com)  
 [QQ Mail](mailto:56887245@qq.com)
-![WebChat:simonezhlx](../images/QR_Code.jpg)
+
 
 
