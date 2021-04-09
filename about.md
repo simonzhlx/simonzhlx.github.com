@@ -18,18 +18,17 @@ permalink: /about/
 
 ## Education
 
-2015/07 - present
+2015/07 - 2017/07
 Beijing University of Aeronautics & Astronautics Cloud Computing And BIg Data Non-unified enrollment Master
 
-2004/02 - 2009/07
+2002/09 - 2006/07
 Beijing Institute of Civi Engineering and Architecture Civil Engineering Bachelor
 
-1997/06 - 2001/09
-Beijing computer industry school Software Secondary Specialized
 
 ## Skills
 
-* 1 year of experience working with Node.JS and Gulp.
+* 4 years of experience with Angular and Vue.
+* 4 years of experience working with Node.JS and Gulp.
 * 1+ year of experience working with ASP.NET Web Api and Windows Azure.
 * 3+ years of experience with ASP.NET (WebForms and MVC).
 * 4+ years of experience writing HTML, CSS, JQuery and JavaScript.
@@ -51,8 +50,7 @@ Beijing computer industry school Software Secondary Specialized
 ## Contact me
 
 [hotmail](mailto:simonzhlx@hotmail.com)  
-
+[QQ Mail](mailto:56887245@qq.com)
 ![WebChat:simonezhlx](../images/QR_Code.jpg)
 
-[BUAA Mail](mailto:simonzhao@buaa.edu.cn)  
 
