@@ -12,7 +12,9 @@ permalink: /about/
 
 真正开始学习欣赏设计的艺术性、代码之美，是从第一次**掌握**了一门OO语言开始。
 
-随着比尔.盖茨15大预言的逐一实现，现代人的生活与工作已经完全被互联网占据。而**大数据、云计算、AI以及逐渐升温的VR&AR**，无不让人惊叹于科技发展之迅速，影响现实生活之广泛。作为IT从业者的我，兴奋之余更多的还是在重新考虑自己的技术方向。。。
+随着比尔.盖茨15大预言的逐一实现，现代人的生活与工作已经完全被互联网占据。而**大数据、云计算、AI以及逐渐升温的VR&AR**，无不让人惊叹于科技发展
+
+之迅速，影响现实生活之广泛。作为IT从业者的我，兴奋之余更多的还是在重新考虑自己的技术方向。。。
 
 好吧，现阶段还是先给自己打广告。。。
 
@@ -21,7 +23,7 @@ permalink: /about/
 2015/07 - 2017/07
 Beijing University of Aeronautics & Astronautics Cloud Computing And BIg Data Non-unified enrollment Master
 
-2002/09 - 2006/07
+2005/09 - 2009/07
 Beijing Institute of Civi Engineering and Architecture Civil Engineering Bachelor
 
 
@@ -45,7 +47,8 @@ Beijing Institute of Civi Engineering and Architecture Civil Engineering Bachelo
 
 
 * [**Dell Help & Support**](http://www.dell.com/support/contents/en/us/hkbsdt1/article/Product-Support/Self-support-Knowledgebase/software-and-downloads/LearningCenter) 
-   
+
+* [**CCIP**](https://www.varian.com/products/software/information-systems/aria-oncology-information-system)
 
 ## Contact me
 
