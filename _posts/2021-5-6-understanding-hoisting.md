@@ -4,7 +4,6 @@ title: 理解JS中的hoisting(翻译)
 permalink: /hoisting-javascript/
 ---
 
-# Understanding Hoisting in JavaScript
 By Mabishi Wakio
 原文地址：https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript
 # 理解JS中的Hoisting
