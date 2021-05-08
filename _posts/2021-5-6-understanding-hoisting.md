@@ -1,17 +1,16 @@
 ---
 layout: post
 title: 理解JS中的hoisting(翻译)
-permalink: /hoisting-javascript/
+permalink: /hoisting-JavaScript/
 ---
 
 By Mabishi Wakio
-原文地址：https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript
-# 理解JS中的Hoisting
+原文地址：https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-JavaScript
 
 ## Introduction
 ## 介绍
 In this tutorial, we’ll investigate how the famed hoisting mechanism occurs in JavaScript. Before we dive in, let’s get to grips with what hoisting is.
-本文将对javascript中著名的hoisting机制进行研究。在深入钱，我们先来看看hoisting到底是个啥。
+本文将对JavaScript中著名的hoisting机制进行研究。在深入钱，我们先来看看hoisting到底是个啥。
 
 Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
 Hoisting就是js的一个机制，它会在代码真正执行前，先将函数与变量声明部分移至所在scope的顶部。
@@ -28,7 +27,7 @@ If you’ve ever wondered why you were able to call functions before you wrote t
 ## undefined vs ReferenceError
 Before we begin in earnest, let’s deliberate on a few things.
 正式开始介绍前，让我们先来仔细考虑一下几件事情。
-```javascript
+```JavaScript
 console.log(typeof variable); // Output: undefined
 ```
 This brings us to our first point of note:
@@ -39,7 +38,7 @@ JS中，一个未声明的变量会在执行时指定为undefined，同时，它
 
 Our second point is:
 下面代码带来我们第二个需要注意的点：
-```javascript
+```JavaScript
 console.log(variable); // Output: ReferenceError: variable is not defined
 ```
 In JavaScript, a ReferenceError is thrown when trying to access a previously undeclared variable.
@@ -55,7 +54,7 @@ The following is the JavaScript lifecycle and indicative of the sequence in whic
 
 However, since JavaScript allows us to both declare and initialise our variables simultaneously, this is the most used pattern:
 因为JS允许我们在声明的同时来初始化变量，因此下面是你最熟悉的方式：
-```javascript
+```JavaScript
 var a = 100;
 ```
 It is however important to remember that in the background, JavaScript is religiously declaring then initialising our variables.
@@ -69,7 +68,7 @@ Therefore, assigning a value to an undeclared variable implicitly creates it as 
 与声明的变量比起来，未声明变量在没有执行到赋值语句时根本不存在。因此，给一个未声明变量赋值实际上是隐式地把它作为一个全局变量创建了。也就是说，所有未声明变量都是全局变量。。。
 To demonstrate this behaviour, have a look at the following:
 下面代码演示了这种行为：
-```javascript
+```JavaScript
 function hoist() {
   a = 20;
   var b = 100;
@@ -102,7 +101,7 @@ Let’s look at a few examples to identify what this means:
 来看几个例子：
 ### global variables
 全局可用变量
-```javascript
+```JavaScript
 console.log(hoist); // Output: undefined
 
 var hoist = 'The variable has been hoisted.';
@@ -118,7 +117,7 @@ JavaScript has hoisted the variable declaration.
 JS将变量声明提前了。
 This is what the code above looks like to the interpreter:
 下面是解释器视角：
-```javascript
+```JavaScript
 var hoist;
 
 console.log(hoist); // Output: undefined
@@ -130,7 +129,7 @@ Because of this, we can use variables before we declare them. However, we have t
 ### Function scoped variables
 As we’ve seen above, variables within a global scope are hoisted to the top of the scope. Next, let’s look at how function scoped variables are hoisted.
 前面看到的都是全局scope的变量提升，接下来看看函数scope的变量提升。
-```javascript
+```JavaScript
 function hoist() {
   console.log(message);
   var message='Hoisting is all the rage!'
@@ -144,7 +143,7 @@ If you guessed, undefined you’re right. If you didn’t, worry not, we’ll so
 如果你的答案是：undefined，那你猜对了。如果猜错了也没有关系，我们很快就会明白为什么了。
 This is how the interpreter views the above code:
 以下为解释器视角：
-```javascript
+```JavaScript
 function hoist() {
   var message;
   console.log(message);
@@ -157,7 +156,7 @@ The variable declaration, var message whose scope is the function hoist(), is ho
 变量message的声明（var message;）被提升到了其scope（function hoist())的最上面。
 To avoid this pitfall, we would make sure to declare and initialise the variable before we use it:
 为了避免这样陷阱的出现，我们需要确认在使用它之前声明和初始化它：
-```javascript
+```JavaScript
 function hoist() {
   var message='Hoisting is all the rage!'
   return (message);
@@ -181,7 +180,7 @@ Prohibits some syntax likely to be defined in future versions of JavaScript.
 未来JS版本可能会在语法上来避免将这样的代码交给解释器。
 We enable strict mode by prefacing our file or function with
 在文件内或函数内启用strict-mode的方式如下：
-```javascript
+```JavaScript
 'use strict';
 
 // OR
@@ -189,7 +188,7 @@ We enable strict mode by prefacing our file or function with
 ```
 Let’s test it out.
 来测试一下。
-```javascript
+```JavaScript
 'use strict';
 
 console.log(hoist); // Output: ReferenceError: hoist is not defined
@@ -211,7 +210,7 @@ Before we start, to be noted is the fact that variables declared with the keywor
 
 Let’s start by looking at the let keyword’s behaviour.
 先来看看let关键字。
-```javascript
+```JavaScript
 console.log(hoist); // Output: ReferenceError: hoist is not defined ...
 let hoist = 'The variable has been hoisted.';
 ```
@@ -221,7 +220,7 @@ This ensures that we always declare our variables first.
 以此来确保我们总是先声明所需的变量。
 However, we still have to be careful here. An implementation like the following will result in an ouput of undefined instead of a Reference error.
 然而，使用let时还是需要小心。像下面的代码片段输出的内容就又变回了undefined而不是引用错误。
-```javascript
+```JavaScript
 let hoist;
 
 console.log(hoist); // Output: undefined
@@ -235,7 +234,7 @@ const关键字在es6中引入来帮助声明常量。常量就是那些一旦赋
 With const, just as with let, the variable is hoisted to the top of the block.
 和let一样，用const修饰的常量也会被提升至块的顶部。
 Let’s see what happens if we try to reassign the value attached to a const variable.
-```javascript
+```JavaScript
 const PI = 3.142;
 
 PI = 22/7; // Let's reassign the value of PI
@@ -244,7 +243,7 @@ console.log(PI); // Output: TypeError: Assignment to constant variable.
 ``` 
 How does const alter variable declaration? Let’s take a look.
 我们来看看Const是如何改变变量声明的。
-```javascript
+```JavaScript
 console.log(hoist); // Output: ReferenceError: hoist is not defined
 const hoist = 'The variable has been hoisted.';
 ``` 
@@ -252,7 +251,7 @@ Much like the let keyword, instead of silently exiting with an undefined, the in
 解释器处理const声明的常量与let声明的变量是类似的，对于上述未声明直接使用，都是直接抛出一个引用错误。
 The same occurs when using const within functions.
 函数内的表现也一样
-```javascript
+```JavaScript
 function getCircumference(radius) {
   console.log(circumference)
   circumference = PI*radius*2;
@@ -269,7 +268,7 @@ PI在声明前就使用了，这种方式对于const变量是非法的。
 
 Globally,
 来看看全局scope的例子
-```javascript
+```JavaScript
 const PI;
 console.log(PI); // Ouput: SyntaxError: Missing initializer in const declaration
 PI=3.142;
@@ -294,7 +293,7 @@ We’ll investigate how hoisting is affected by both function types.
 ### 函数声明
 These are of the following form and are hoisted completely to the top. Now, we can understand why JavaScript enable us to invoke a function seemingly before declaring it.
 下面的函数声明将被完整的提升到scope顶部。现在我们就能理解为何JS支持函数调用写在函数声明之前了。
-```javascript
+```JavaScript
 hoisted(); // Output: "This function has been hoisted."
 
 function hoisted() {
@@ -305,7 +304,7 @@ function hoisted() {
 ### 函数表达式
 Function expressions, however are not hoisted.
 函数表达式不会被提升。
-```javascript
+```JavaScript
 expression(); //Output: "TypeError: expression is not a function
 
 var expression = function() {
@@ -314,7 +313,7 @@ var expression = function() {
 ```
 Let’s try the combination of a function declaration and expression.
 来尝试一下两者的结合。
-```javascript
+```JavaScript
 expression(); // Ouput: TypeError: expression is not a function
 
 var expression = function hoisting() {
@@ -337,7 +336,7 @@ Let’s take a look at what implications this behaviour has.
 让我们来看看这种行为有那些隐含意义。
 Variable assignment over function declaration
 变量赋值优先于函数声明
-```javascript
+```JavaScript
 var double = 22;
 
 function double(num) {
@@ -348,7 +347,7 @@ console.log(typeof double); // Output: number
 ```
 Function declarations over variable declarations
 函数声明优先于变量声明
-```javascript
+```JavaScript
 var double;
 
 function double(num) {
@@ -373,7 +372,7 @@ Class declarations
 Much like their function counterparts, JavaScript class declarations are hoisted. However, they remain uninitialised until evaluation.
 This effectively means that you have to declare a class before you can use it.
 和函数声明一样，类声明也会被提升。然而会保持为未初始化状态直到求值。这也意味着你必须在使用一个类前，先声明它。
-```javascript
+```JavaScript
 var Frodo = new Hobbit();
 Frodo.height = 100;
 Frodo.weight = 300;
@@ -394,7 +393,7 @@ Hobbit was used before it is declared, which is illegal for class variables
 Hobbit在声明前就使用了，这种用法是非法的
 So, as far as class declarations go, to access the class declaration, you have to declare first.
 所以，先声明类再使用它
-```javascript
+```JavaScript
 class Hobbit {
   constructor(height, weight) {
     this.height = height;
@@ -413,7 +412,7 @@ Much like their function counterparts, class expressions are not hoisted.
 和函数表达式一样，类表达式也不会被提升。
 Here’s an example with the un-named or anonymous variant of the class expression.
 下面的例子是一个匿名类表达式
-```javascript
+```JavaScript
 var Square = new Polygon();
 Square.height = 10;
 Square.width = 10;
@@ -428,7 +427,7 @@ var Polygon = class {
 ``` 
 Here’s an example with a named class expression.
 接下来是一个命名的类表达式例子
-```javascript
+```JavaScript
 var Square = new Polygon();
 Square.height = 10;
 Square.width = 10;
@@ -444,7 +443,7 @@ var Polygon = class Polygon {
 ``` 
 The correct way to do it is like this:
 下面为正确的方式：
-```javascript
+```JavaScript
 var Polygon = class Polygon {
   constructor(height, width) {
     this.height = height;
@@ -459,7 +458,7 @@ console.log(Square);
 ```
 ## Caveat
 ## 警告
-There’s a bit of an argument to be made as to whether Javascript es6 let, const variables and classes are actually hoisted, roughly hoisted or not hoisted. Some argue that they are actually hoisted but uninitialised whilst some argue that they are not hoisted at all.
+There’s a bit of an argument to be made as to whether JavaScript es6 let, const variables and classes are actually hoisted, roughly hoisted or not hoisted. Some argue that they are actually hoisted but uninitialised whilst some argue that they are not hoisted at all.
 关于let,const声明的变量以及类是否真的被提升了，目前还有一点争论。
 ## Conclusion
 ## 结论
